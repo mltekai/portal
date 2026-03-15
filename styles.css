@@ -108,16 +108,7 @@ ul { list-style: none; }
     height: 68px;
   }
 
-  /* Logo image styling */
-  .logo-img {
-    max-height: 56px;
-    width: auto;
-    display: block;
-    margin-right: 12px;
-    background: transparent;
-    border-radius: 0;
-    object-fit: contain;
-  }
+  /* Logo image styling removed */
 
 .logo {
   font-size: 1.25rem;
