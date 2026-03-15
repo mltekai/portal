@@ -13,8 +13,15 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MLTEK Solutions – Agentic AI for Data Problem Solving" />
   <meta name="twitter:description" content="Autonomous AI agents for data analytics and pattern discovery." />
+  <meta name="twitter:image" content="https://mltekai.com/og-image.png" />
+  <meta property="og:image" content="https://mltekai.com/og-image.png" />
+  <meta property="og:site_name" content="MLTEK Solutions" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <link rel="canonical" href="https://mltekai.com/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234f9cf9'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='system-ui,sans-serif' font-size='18' font-weight='800' fill='white'>M</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -22,8 +29,8 @@
   <!-- ========== NAVIGATION ========== -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a href="#" class="logo">MLTEK<span>Solutions</span></a>
-      <nav>
+      <a href="#home" class="logo">MLTEK<span>Solutions</span></a>
+      <nav aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -32,14 +39,14 @@
         </ul>
       </nav>
       <a href="#contact" class="btn btn-outline">Request a Consultation</a>
-      <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">&#9776;</button>
+      <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#about" onclick="toggleMenu()">About</a>
-      <a href="#services" onclick="toggleMenu()">Services</a>
-      <a href="#blogs" onclick="toggleMenu()">Blogs</a>
-      <a href="#contact" onclick="toggleMenu()">Contact</a>
-      <a href="#contact" class="btn btn-primary" onclick="toggleMenu()">Request a Consultation</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary">Request a Consultation</a>
     </div>
   </header>
 
@@ -49,7 +56,7 @@
     <div class="container hero-content">
       <p class="eyebrow">MLTEK SOLUTIONS</p>
       <h1>Agentic AI for Data<br /><span>Problem Solving</span></h1>
-      <p style="max-width: 500px; color: var(--clr-muted); font-size:1.2rem; margin: 1.5rem 0;">Deploy autonomous AI agents to analyze, optimize, and automate your toughest data challenges. Unlock actionable insights, faster decisions, and scalable solutions—no manual wrangling required.</p>
+      <p class="hero-subtitle">Deploy autonomous AI agents to analyze, optimize, and automate your toughest data challenges. Unlock actionable insights, faster decisions, and scalable solutions—no manual wrangling required.</p>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-primary">Talk to an AI Agent</a>
         <a href="#services" class="btn btn-ghost">See How It Works</a>
@@ -157,10 +164,10 @@
           <span class="blog-card-read">Read article &rarr;</span>
         </a>
 
-        <a href="Blogs/blog-ai-first-data-strategy.html" target="_blank" rel="noopener" class="blog-card featured reveal">
+        <a href="Blogs/blog-ai-first-data-strategy.html" class="blog-card featured reveal">
           <div class="blog-card-tag">AI-First Series</div>
           <h3>Data Strategy for Generative AI</h3>
-          <p>Readiness frameworks, four architectural pillars, RAG/GraphRAG, converged storage, and governance for the agentic era. <em>By Kishore Namburi.</em></p>
+          <p>Readiness frameworks, four architectural pillars, RAG/GraphRAG, converged storage, and governance for the agentic era. <em>By Kishore N.</em></p>
           <span class="blog-card-read">Read full article &rarr;</span>
         </a>
 
@@ -222,32 +229,33 @@
             <span class="contact-icon">&#128241;</span>
             <div>
               <strong>Social Media</strong>
-              <a href="https://www.instagram.com/mltekai" target="_blank" rel="noopener">@mltekai</a>
+              <a href="https://www.instagram.com/mltekai" target="_blank" rel="noopener noreferrer">@mltekai</a>
             </div>
           </li>
         </ul>
       </div>
 
       <div class="form-col reveal">
-        <form id="contactForm" onsubmit="handleSubmit(event)">
+        <form id="contactForm">
           <h3>Connect with an AI Agent</h3>
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required />
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            <input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" required />
           </div>
           <div class="form-group">
             <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Acme Corp" />
+            <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization" />
           </div>
           <div class="form-group">
             <label for="message">How can we help?</label>
             <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary full-width">Send Message</button>
+          <p class="form-error" id="formError" role="alert"></p>
           <p class="form-success" id="formSuccess">Thank you! An AI agent will reach out soon.</p>
         </form>
       </div>
@@ -259,7 +267,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span class="logo">MLTEK<span>Solutions</span></span>
-      <nav class="footer-links">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
@@ -270,7 +278,7 @@
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
-  <script src="main.js"></script>
+  <button class="back-to-top" type="button" id="backToTop" aria-label="Back to top">&#8679;</button>
+  <script src="main.js" defer></script>
 </body>
 </html>

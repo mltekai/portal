@@ -5,6 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://mltekai.github.io/portal/sitemap.xml
-
-# Comment: Entire site is crawlable by search engines
+Sitemap: https://mltekai.com/sitemap.xml
