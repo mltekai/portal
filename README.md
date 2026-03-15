@@ -2,7 +2,7 @@
 
 Professional website for MLTEK Solutions — *Data Insights Driving Innovation*.
 
-Live site: **[https://mlteksolutions.github.io/portal](https://mlteksolutions.github.io/portal)**
+Live site: **[https://mltekai.github.io/portal](https://mltekai.github.io/portal)**
 
 ## Stack
 
@@ -44,6 +44,6 @@ Your site will be live at `https://<your-github-username>.github.io/portal`.
 
 ## Contact
 
-- **Email:** contact@mlteksolutions.com
+- **Email:** contact@mltekai.com
 - **Phone:** 302-468-6034
-- **Social:** @mlteksolutions
+- **Social:** @mltekai
