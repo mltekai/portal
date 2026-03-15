@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversational Voicebot Agent – MLTEK Solutions</title>
+  <meta name="description" content="How MLTEK builds voice-first conversational AI agents: speech capture, transcription, LLM reasoning, and text-to-speech playback — with desktop and server deployment modes." />
+  <meta name="keywords" content="conversational AI, chatbots, virtual assistants, AI agents, use cases" />
+  <meta property="og:title" content="Conversational AI Agent Use Cases" />
+  <meta property="og:description" content="Explore how conversational AI agents transform customer support, virtual assistance, sales, knowledge retrieval, and voice interactions." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://mltekai.com/usecases/conversational_usecase.html" />
+  <meta property="og:image" content="https://mltekai.com/og-image.png" />
+  <meta property="og:site_name" content="MLTEK Solutions" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://mltekai.com/og-image.png" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <link rel="canonical" href="https://mltekai.com/usecases/conversational_usecase.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234f9cf9'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='system-ui,sans-serif' font-size='18' font-weight='800' fill='white'>M</text></svg>" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .blog-container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .blog-header {
+      margin-bottom: 3rem;
+      padding-top: 4rem;
+    }
+    .blog-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .blog-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--clr-accent);
+      background: rgba(79, 156, 249, 0.12);
+      border: 1px solid rgba(79, 156, 249, 0.25);
+      border-radius: 50px;
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 1.5rem;
+      color: var(--clr-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .blog-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem 0;
+      color: var(--clr-text);
+    }
+    .blog-content h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 2rem 0 0.75rem 0;
+      color: var(--clr-accent);
+    }
+    .blog-content p {
+      margin-bottom: 1.25rem;
+      color: var(--clr-muted);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .blog-content ul, .blog-content ol {
+      margin: 1.5rem 0 1.5rem 1.5rem;
+      color: var(--clr-muted);
+    }
+    .blog-content li {
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+    .use-case-card {
+      background: rgba(79, 156, 249, 0.08);
+      border-left: 4px solid var(--clr-accent);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+    .use-case-card strong {
+      color: var(--clr-accent);
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .use-case-card p {
+      margin-bottom: 0;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--clr-accent);
+      transition: color var(--transition);
+    }
+    .back-btn:hover {
+      color: var(--clr-text);
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">MLTEK<span>Solutions</span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#how-it-works">How It Works</a></li>
+          <li><a href="../index.html#blogs">Blogs</a></li>
+          <li><a href="../index.html#usecases">Usecases</a></li>
+          <li><a href="../index.html#industries">Industries</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#how-it-works">How It Works</a>
+      <a href="../index.html#blogs">Blogs</a>
+      <a href="../index.html#usecases">Usecases</a>
+      <a href="../index.html#industries">Industries</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="blog-container">
+    <a href="../index.html#usecases" class="back-btn">← Back to Use Cases</a>
+    <article class="blog-content">
+      <div class="blog-header">
+        <span class="blog-tag">Conversational Interaction</span>
+        <h1>Conversational Voicebot Agent</h1>
+        <div class="blog-meta">
+          <span>By MLTEK Solutions</span>
+          <span>March 2026</span>
+        </div>
+      </div>
+
+      <p style="font-size: 1.1rem; color: var(--clr-muted); line-height: 1.8; margin-bottom: 2rem;">
+        A Conversational AI Agent interacts with users through natural language, providing information, performing tasks, or facilitating workflows. This solution is a <strong>voice-first agent</strong> — it captures speech, transcribes it in real time, reasons through an LLM, and speaks the response back. It supports two deployment modes: a <strong>desktop GUI</strong> for interactive use and a <strong>headless CLI</strong> for server or embedded environments.
+      </p>
+
+      <h2>Capabilities</h2>
+
+      <div class="use-case-card">
+        <strong>🎙️ End-to-End Voice Pipeline</strong>
+        <p>Audio is captured from the microphone, normalised, and passed through a speech-to-text engine to produce a transcript. The transcript is reasoned over by an LLM agent, and the generated response is synthesised into speech and played back—all in a single, continuous pipeline with no manual steps.</p>
+      </div>
+
+      <div class="use-case-card">
+        <strong>🖥️ Desktop GUI Mode</strong>
+        <p>An interactive desktop window with Start/Stop recording controls, a live status indicator, and separate panes showing the spoken transcript and the agent’s response. Recording runs in the background so the interface stays fully responsive during capture.</p>
+      </div>
+
+      <div class="use-case-card">
+        <strong>⌨️ Headless CLI Mode</strong>
+        <p>The same record–transcribe–respond logic without any graphical dependency. Suitable for server environments, embedded systems, or any context where a GUI is unavailable. The agent prints transcript and response to the console and plays audio through the system speaker.</p>
+      </div>
+
+      <div class="use-case-card">
+        <strong>🤖 LLM Agent with Conversation Memory</strong>
+        <p>A LangChain-backed agent maintains conversation history across turns using a prompt template that injects prior exchanges alongside each new utterance. This gives the agent multi-turn context awareness without requiring a separate memory store. A configurable timeout prevents stalls on slow model responses.</p>
+      </div>
+
+      <h2>Key Components</h2>
+
+      <ul>
+        <li><strong>Audio Capture:</strong> Microphone input is recorded on a background thread and streamed into an in-memory buffer, keeping the UI or CLI fully responsive during recording.</li>
+        <li><strong>Speech-to-Text:</strong> The raw audio buffer is converted to text using a Whisper-compatible speech recognition backend.</li>
+        <li><strong>LLM Agent:</strong> A LangChain agent wraps the selected language model, injects conversation history via a structured prompt template, and returns a concise natural-language response.</li>
+        <li><strong>Prompt Design:</strong> The system prompt constrains responses to under 20 words and maintains a polite, helpful persona—optimised for voice interactions where brevity is essential.</li>
+        <li><strong>Text-to-Speech:</strong> The agent’s text response is synthesised into audio and played back through the system speaker immediately after generation.</li>
+        <li><strong>Dual Deployment:</strong> The same core pipeline is exposed through two interfaces—a desktop GUI and a headless CLI—with automatic fallback when a graphical environment is unavailable.</li>
+      </ul>
+
+      <h2>Voice Interaction Workflow</h2>
+
+      <ol>
+        <li><strong>Start Recording:</strong> The user initiates recording via a button (GUI) or key press (CLI); audio capture begins on a background thread.</li>
+        <li><strong>Stop Recording:</strong> The user signals end of speech; the capture thread stops and all buffered audio is assembled for processing.</li>
+        <li><strong>Transcription:</strong> The audio buffer is passed to the speech-to-text engine, returning the spoken words as text.</li>
+        <li><strong>Agent Reasoning:</strong> The transcript and conversation history are injected into the prompt template and sent to the LLM agent, which reasons and returns a response within the configured timeout.</li>
+        <li><strong>Speak Response:</strong> The response text is synthesised into speech and played back through the system speaker.</li>
+        <li><strong>Reset:</strong> The interface returns to idle, ready for the next interaction.</li>
+      </ol>
+
+      <h2>Technologies</h2>
+
+      <ul>
+        <li><strong>LangChain:</strong> Agent orchestration, prompt templating, and LLM execution with timeout management.</li>
+        <li><strong>Whisper (OpenAI):</strong> Speech-to-text transcription from microphone audio.</li>
+        <li><strong>Text-to-Speech Engine:</strong> Synthesises agent responses into natural-sounding audio for playback.</li>
+        <li><strong>Audio Capture Library:</strong> Low-latency cross-platform microphone capture.</li>
+        <li><strong>Desktop GUI:</strong> Native windowed interface with recording controls and transcript/response display.</li>
+        <li><strong>CLI Interface:</strong> Console-based interaction mode with formatted terminal output for headless deployments.</li>
+      </ul>
+
+      <h2>References</h2>
+
+      <ul>
+        <li><a href="https://python.langchain.com/docs/modules/agents/" target="_blank" rel="noopener noreferrer">LangChain Agents Documentation</a></li>
+        <li><a href="https://docs.langflow.org/components-agents" target="_blank" rel="noopener noreferrer">Langflow Agent Flows</a></li>
+        <li><a href="https://github.com/meta-llama/llama-cookbook" target="_blank" rel="noopener noreferrer">Meta Llama Cookbook: Chatbot Use Cases</a></li>
+      </ul>
+
+      <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(79, 156, 249, 0.1); font-size: 0.95rem; color: var(--clr-muted);">
+        This document provides an architectural overview of the conversational voicebot agent. To discuss how this solution applies to your business, <a href="../index.html#contact" style="color: var(--clr-accent);">contact our team →</a>
+      </p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">MLTEK<span>Solutions</span></span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#how-it-works">How It Works</a>
+        <a href="../index.html#usecases">Usecases</a>
+        <a href="../index.html#industries">Industries</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms &amp; Support</a>
+      </nav>
+      <p class="copyright">&copy; <span id="year"></span> MLTEK Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" id="backToTop" aria-label="Back to top">&#8679;</button>
+  <script src="../main.js" defer></script>
+</body>
+</html>
