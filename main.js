@@ -35,7 +35,6 @@ document.addEventListener('click', (e) => {
 document.getElementById('contactForm').addEventListener('submit', handleSubmit);
 
 function handleSubmit(e) {
-  e.preventDefault();
   const form    = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
   const errorEl = document.getElementById('formError');
@@ -45,23 +44,17 @@ function handleSubmit(e) {
   const email   = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
 
+  // Client-side validation
   if (!name || !email || !message) {
+    e.preventDefault();
     errorEl.textContent = 'Please fill in all required fields.';
     return;
   }
   errorEl.textContent = '';
 
+  // Allow form to submit to Formspree
   btn.disabled    = true;
   btn.textContent = 'Sending…';
-
-  // TODO: Replace timeout with real email service (Formspree, EmailJS, etc.)
-  setTimeout(() => {
-    form.reset();
-    btn.disabled    = false;
-    btn.textContent = 'Send Message';
-    success.classList.add('visible');
-    setTimeout(() => success.classList.remove('visible'), 6000);
-  }, 1200);
 }
 
 // ---- Consolidated & Throttled Scroll Handler ----
