@@ -1,0 +1,10 @@
+# MLTEK Solutions — Robots.txt
+# Allow all search engine crawlers
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mltekai.github.io/portal/sitemap.xml
+
+# Comment: Entire site is crawlable by search engines
