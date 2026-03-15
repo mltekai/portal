@@ -10,14 +10,14 @@
 }
 
 :root {
-  --clr-dark:    #0a0e1a;
-  --clr-darker:  #060912;
-  --clr-accent:  #4f9cf9;
-  --clr-accent2: #7b61ff;
-  --clr-text:    #e2e8f0;
-  --clr-muted:   #8899aa;
-  --clr-card:    #111827;
-  --clr-border:  rgba(255,255,255,0.08);
+  --clr-dark:    #0d1224;
+  --clr-darker:  #0a0f1e;
+  --clr-accent:  #4da6ff;
+  --clr-accent2: #8b5cf6;
+  --clr-text:    #f0f4ff;
+  --clr-muted:   #a0b4cc;
+  --clr-card:    #131d30;
+  --clr-border:  rgba(255,255,255,0.12);
   --max-width:   1200px;
   --radius:      12px;
   --transition:  0.25s ease;
@@ -26,10 +26,10 @@
 
 body {
   font-family: var(--font);
-  background: var(--clr-dark);
+  background: linear-gradient(160deg, #0d1224 0%, #101828 100%);
   color: var(--clr-text);
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: 1.0625rem;
 }
 
 img { display: block; max-width: 100%; border-radius: var(--radius); }
@@ -215,12 +215,12 @@ section[id], div[id] { scroll-margin-top: 80px; }
 }
 
 .hero-content h1 {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.75rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.1;
   margin-bottom: 2rem;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--clr-text) 0%, var(--clr-accent) 100%);
+  background: linear-gradient(120deg, #ffffff 0%, var(--clr-accent) 60%, var(--clr-accent2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -243,13 +243,14 @@ section[id], div[id] { scroll-margin-top: 80px; }
 }
 
 .text-col h2 {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
-.text-col p { color: var(--clr-muted); font-size: 1.05rem; }
+.text-col p { color: var(--clr-muted); font-size: 1.075rem; }
 
 .image-col img {
   width: 100%;
@@ -311,10 +312,11 @@ section[id], div[id] { scroll-margin-top: 80px; }
 }
 
 .cta-text h2 {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .cta-text p {
@@ -328,10 +330,11 @@ section[id], div[id] { scroll-margin-top: 80px; }
 
 /* ---------- Services Section ---------- */
 .services-section h2 {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
   font-weight: 700;
   margin-bottom: 3.5rem;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .cards {
@@ -359,18 +362,20 @@ section[id], div[id] { scroll-margin-top: 80px; }
 }
 
 .card h3 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.85rem;
+  color: #ffffff;
 }
 .card p { color: var(--clr-muted); font-size: 0.95rem; }
 
 /* ---------- Blogs Section ---------- */
 .blogs-section h2 {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
   font-weight: 700;
   margin-bottom: 3.5rem;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .blog-grid {
@@ -423,9 +428,10 @@ a.blog-card:hover {
 }
 
 .blog-card h3 {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.35;
+  color: #ffffff;
 }
 
 .blog-card p {
@@ -465,15 +471,18 @@ a.blog-card:hover {
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  opacity: 0.75;
+}
+
+.industry-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .industry-icon {
   font-size: 2rem;
   line-height: 1;
 }
-
-/* ---------- Back to Top ---------- */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
