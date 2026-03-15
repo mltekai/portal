@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLTEK Solutions – Data Insights Driving Innovation</title>
+  <meta name="description" content="MLTEK Solutions provides digital transformation, personalized solutions, and data analytics services. Contact us to request a consultation." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">MLTEK<span>Solutions</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn btn-outline">Request a Consultation</a>
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#services" onclick="toggleMenu()">Services</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+      <a href="#contact" class="btn btn-primary" onclick="toggleMenu()">Request a Consultation</a>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">MLTEK SOLUTIONS</p>
+      <h1>Data Insights Driving<br /><span>Innovation</span></h1>
+      <a href="#contact" class="btn btn-primary">Request a Consultation</a>
+    </div>
+  </section>
+
+  <!-- ========== PROMISE ========== -->
+  <section class="section promise-section" id="about">
+    <div class="container two-col">
+      <div class="text-col">
+        <p class="section-label">Our Promise</p>
+        <h2>On-Demand Computing<br />Built for Your Growth</h2>
+        <p>
+          We work with you to take advantage of all of the core benefits associated
+          with on-demand computing: accessing seemingly limitless storage and compute
+          capacity, scaling your system in parallel with growing amounts of data
+          collected, stored, queried — and paying only for the resources you provision.
+        </p>
+      </div>
+      <div class="image-col">
+        <img
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80"
+          alt="Data infrastructure visualization"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <p class="section-label centered">Our Exciting Service Offerings</p>
+      <h2 class="centered">We Take Pride in Defining<br />Your Organization's Growth</h2>
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-icon">&#128201;</div>
+          <h3>Digital Transformation</h3>
+          <p>
+            Modernize your business with cloud-native architecture, DevOps practices,
+            and scalable infrastructure that accelerates time-to-value.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">&#127919;</div>
+          <h3>Personalized Solutions</h3>
+          <p>
+            Every organization is unique. We design bespoke strategies and solutions
+            tailored precisely to your data maturity, goals, and team capabilities.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">&#128202;</div>
+          <h3>Data Analytics</h3>
+          <p>
+            Turn raw data into actionable intelligence with end-to-end analytics
+            pipelines, dashboards, and machine-learning models that drive decisions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="container two-col contact-inner">
+
+      <div class="text-col">
+        <p class="section-label">MLTek Solutions</p>
+        <h2>Let's Start a Conversation</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon">&#128222;</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:3024686034">302-468-6034</a>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">&#128205;</span>
+            <div>
+              <strong>Address</strong>
+              <span>Dallas, TX</span>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">&#9993;</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:contact@mlteksolutions.com">contact@mlteksolutions.com</a>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">&#128241;</span>
+            <div>
+              <strong>Social Media</strong>
+              <a href="https://www.instagram.com/mlteksolutions" target="_blank" rel="noopener">@mlteksolutions</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-col">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <h3>Contact us to request a consultation</h3>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp" />
+          </div>
+          <div class="form-group">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Send Message</button>
+          <p class="form-success" id="formSuccess">Thank you! We'll be in touch shortly.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">MLTEK<span>Solutions</span></span>
+      <nav class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Support</a>
+      </nav>
+      <p class="copyright">&copy; <span id="year"></span> MLTEK Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
