@@ -328,6 +328,58 @@ section[id], div[id] { scroll-margin-top: 80px; }
 /* ---------- Promise Section ---------- */
 .promise-section { background: var(--clr-darker); }
 
+.about-pivot {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--clr-accent);
+  background: rgba(77, 166, 255, 0.06);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.about-pivot-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--clr-accent);
+  margin-bottom: 0.5rem;
+}
+
+.about-pivot p {
+  color: var(--clr-text) !important;
+  font-size: 0.975rem !important;
+  line-height: 1.7;
+}
+
+.about-credentials {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.credential {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.credential-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--clr-accent);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.credential-label {
+  font-size: 0.75rem;
+  color: var(--clr-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
 /* ---------- Services Section ---------- */
 .services-section h2 {
   font-size: clamp(1.8rem, 3vw, 2.75rem);
