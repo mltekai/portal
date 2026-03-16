@@ -23,25 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: 'var(--clr-accent)',
-            brand2: 'var(--clr-accent2)',
-            ink: 'var(--clr-text)',
-            muted: 'var(--clr-muted)',
-            panel: 'var(--clr-darker)'
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="tailwind.css" />
   <!-- ── Structured Data (JSON-LD) ── -->
   <script type="application/ld+json">
   {
@@ -156,27 +138,27 @@
       <a href="#home" class="logo">MLTEK<span>Solutions</span></a>
       <nav aria-label="Main navigation" class="ml-auto hidden md:block">
         <ul class="flex items-center gap-8">
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#about">About</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#vision">Vision</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#services">Services</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#how-it-works">How It Works</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#blogs">Blogs</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#usecases">Usecases</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#industries">Industries</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#contact">Contact</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#vision">Vision</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+          <li><a class="nav-link" href="#blogs">Blogs</a></li>
+          <li><a class="nav-link" href="#usecases">Usecases</a></li>
+          <li><a class="nav-link" href="#industries">Industries</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
       <button class="hamburger ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/15 text-xl text-ink transition hover:border-brand/60 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70 md:hidden" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
     </div>
     <div class="mobile-menu hidden border-t border-white/10 bg-[#0a0f1e] px-6 py-5 md:hidden" id="mobileMenu">
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#about">About</a>
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#vision">Vision</a>
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#services">Services</a>
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#how-it-works">How It Works</a>
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#blogs">Blogs</a>
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#usecases">Usecases</a>
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#industries">Industries</a>
-      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#contact">Contact</a>
+      <a class="mobile-nav-link" href="#about">About</a>
+      <a class="mobile-nav-link" href="#vision">Vision</a>
+      <a class="mobile-nav-link" href="#services">Services</a>
+      <a class="mobile-nav-link" href="#how-it-works">How It Works</a>
+      <a class="mobile-nav-link" href="#blogs">Blogs</a>
+      <a class="mobile-nav-link" href="#usecases">Usecases</a>
+      <a class="mobile-nav-link" href="#industries">Industries</a>
+      <a class="mobile-nav-link" href="#contact">Contact</a>
     </div>
   </header>
 
@@ -401,50 +383,100 @@
       <p class="section-label centered">Blogs</p>
       <h2 class="centered">Insights &amp; Thought Leadership</h2>
 
-      <div class="blog-grid">
+      <div class="blog-grid" id="blogGrid">
 
-        <a href="Blogs/blog-agentic-ai-workflows.html" class="blog-card reveal">
+        <!-- ── Page 1 ── -->
+        <a href="Blogs/blog-agentic-ai-workflows.html" class="blog-card reveal" data-page="1">
           <div class="blog-card-tag">Workflows</div>
           <h3>How Agentic AI is Transforming Data Workflows</h3>
           <p>Traditional pipelines are slow and manual. Learn how autonomous agents discover patterns, detect anomalies, and act&mdash;no human in the loop.</p>
           <span class="blog-card-read">Read article &rarr;</span>
         </a>
 
-        <a href="Blogs/blog-trustworthy-agents.html" class="blog-card reveal">
+        <a href="Blogs/blog-trustworthy-agents.html" class="blog-card reveal" data-page="1">
           <div class="blog-card-tag">Trust &amp; Safety</div>
           <h3>Building Trustworthy Autonomous Agents</h3>
           <p>Explore the five pillars&mdash;transparency, accountability, alignment, robustness, and fairness&mdash;that make agents enterprise-ready.</p>
           <span class="blog-card-read">Read article &rarr;</span>
         </a>
 
-        <a href="Blogs/blog-ai-first-data-strategy.html" class="blog-card featured reveal">
+        <a href="Blogs/blog-ai-first-data-strategy.html" class="blog-card featured reveal" data-page="1">
           <div class="blog-card-tag">AI-First Series</div>
           <h3>Data Strategy for Generative AI</h3>
           <p>Readiness frameworks, four architectural pillars, RAG/GraphRAG, converged storage, and governance for the agentic era. <em>By Kishore N.</em></p>
           <span class="blog-card-read">Read full article &rarr;</span>
         </a>
 
-        <div class="blog-card coming-soon reveal">
+        <div class="blog-card coming-soon reveal" data-page="1">
           <div class="blog-card-tag">Security</div>
           <h3>Securing AI-Driven Systems: Best Practices</h3>
           <p>Defense-in-depth strategies for agentic architectures operating on sensitive enterprise data.</p>
           <span class="blog-card-read coming-soon-label">Coming soon</span>
         </div>
 
-        <div class="blog-card coming-soon reveal">
+        <div class="blog-card coming-soon reveal" data-page="1">
           <div class="blog-card-tag">Governance</div>
           <h3>AI Governance: Policies for Responsible Use</h3>
           <p>Building ethical, auditable frameworks that let your organization move fast without breaking trust.</p>
           <span class="blog-card-read coming-soon-label">Coming soon</span>
         </div>
 
-        <div class="blog-card coming-soon reveal">
+        <div class="blog-card coming-soon reveal" data-page="1">
           <div class="blog-card-tag">Resilience</div>
           <h3>Designing Resilient AI Systems</h3>
           <p>Fault-tolerant patterns so your agentic pipelines keep running even when components fail.</p>
           <span class="blog-card-read coming-soon-label">Coming soon</span>
         </div>
 
+        <!-- ── Page 2 ── -->
+        <div class="blog-card coming-soon reveal" data-page="2">
+          <div class="blog-card-tag">Evaluation</div>
+          <h3>Evaluating AI Agents: Best Practices for Building Agentic Systems</h3>
+          <p>How to assess reliability, accuracy, and safety of autonomous agents&mdash;practical frameworks for testing and validating production agentic systems.</p>
+          <span class="blog-card-read coming-soon-label">Coming soon</span>
+        </div>
+
+        <div class="blog-card coming-soon reveal" data-page="2">
+          <div class="blog-card-tag">Observability</div>
+          <h3>Monitoring &amp; Observability for AI Agents</h3>
+          <p>Telemetry, tracing, and alerting strategies that give you full visibility into the behavior of deployed agentic systems.</p>
+          <span class="blog-card-read coming-soon-label">Coming soon</span>
+        </div>
+
+        <div class="blog-card coming-soon reveal" data-page="2">
+          <div class="blog-card-tag">Multi-Agent</div>
+          <h3>Orchestrating Multi-Agent Systems at Scale</h3>
+          <p>Patterns for coordinating fleets of specialized agents&mdash;task routing, conflict resolution, and shared memory across agent boundaries.</p>
+          <span class="blog-card-read coming-soon-label">Coming soon</span>
+        </div>
+
+        <div class="blog-card coming-soon reveal" data-page="2">
+          <div class="blog-card-tag">RAG</div>
+          <h3>RAG in Production: Lessons from the Field</h3>
+          <p>Chunking strategies, retrieval tuning, and hybrid search techniques for grounding LLM agents in enterprise knowledge bases.</p>
+          <span class="blog-card-read coming-soon-label">Coming soon</span>
+        </div>
+
+        <div class="blog-card coming-soon reveal" data-page="2">
+          <div class="blog-card-tag">Cost &amp; Latency</div>
+          <h3>Optimizing Cost and Latency in Agentic Pipelines</h3>
+          <p>Model selection, caching, batching, and prompt engineering techniques that reduce token spend without sacrificing agent accuracy.</p>
+          <span class="blog-card-read coming-soon-label">Coming soon</span>
+        </div>
+
+        <div class="blog-card coming-soon reveal" data-page="2">
+          <div class="blog-card-tag">Deployment</div>
+          <h3>From Prototype to Production: Deploying AI Agents Safely</h3>
+          <p>CI/CD, canary rollouts, human-in-the-loop review gates, and rollback strategies for enterprise-grade agentic deployments.</p>
+          <span class="blog-card-read coming-soon-label">Coming soon</span>
+        </div>
+
+      </div>
+
+      <!-- Blog Pagination -->
+      <div class="blog-pagination" id="blogPagination">
+        <button class="blog-page-btn active" data-page="1" aria-label="Page 1">1</button>
+        <button class="blog-page-btn" data-page="2" aria-label="Page 2">2</button>
       </div>
     </div>
   </section>

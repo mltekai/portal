@@ -22,25 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: 'var(--clr-accent)',
-            brand2: 'var(--clr-accent2)',
-            ink: 'var(--clr-text)',
-            muted: 'var(--clr-muted)',
-            panel: 'var(--clr-darker)'
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../tailwind.css" />
   <style>
     /* ── Blog layout ── */
     .blog-container {
@@ -88,19 +70,6 @@
       padding-left: 1.25rem;
       margin-bottom: 2.5rem;
     }
-
-    /* ── Back link ── */
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 2rem;
-      color: var(--clr-accent);
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: color var(--transition);
-    }
-    .back-btn:hover { color: var(--clr-text); }
 
     /* ── Body text ── */
     .blog-content h2 {
@@ -384,19 +353,19 @@
       <a href="../index.html" class="logo">MLTEK<span>Solutions</span></a>
       <nav aria-label="Main navigation" class="ml-auto hidden md:block">
         <ul class="flex items-center gap-8">
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#about">About</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#services">Services</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#blogs">Blogs</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#contact">Contact</a></li>
+          <li><a class="nav-link" href="../index.html#about">About</a></li>
+          <li><a class="nav-link" href="../index.html#services">Services</a></li>
+          <li><a class="nav-link" href="../index.html#blogs">Blogs</a></li>
+          <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/15 text-xl text-ink transition hover:border-brand/60 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70 md:hidden" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">&#9776;</button>
+      <button class="hamburger ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/15 text-xl text-ink transition hover:border-brand/60 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70 md:hidden" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
     </div>
     <div class="mobile-menu hidden" id="mobileMenu">
-      <a href="../index.html#about" onclick="toggleMenu()">About</a>
-      <a href="../index.html#services" onclick="toggleMenu()">Services</a>
-      <a href="../index.html#blogs" onclick="toggleMenu()">Blogs</a>
-      <a href="../index.html#contact" onclick="toggleMenu()">Contact</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#blogs">Blogs</a>
+      <a href="../index.html#contact">Contact</a>
     </div>
   </header>
 
@@ -678,25 +647,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const btn  = document.querySelector('.hamburger');
-      const isOpen = menu.classList.toggle('open');
-      menu.classList.toggle('hidden', !isOpen);
-      if (btn) btn.setAttribute('aria-expanded', String(isOpen));
-    }
-    document.addEventListener('click', (e) => {
-      const menu = document.getElementById('mobileMenu');
-      const hamburger = document.querySelector('.hamburger');
-      if (!menu || !hamburger) return;
-      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
-        menu.classList.remove('open');
-        menu.classList.add('hidden');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  </script>
+  <script src="../main.js" defer></script>
 </body>
 </html>

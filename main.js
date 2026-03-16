@@ -119,6 +119,36 @@ if (backToTop) {
   });
 }
 
+// ---- Blog pagination ----
+const blogGrid = document.getElementById('blogGrid');
+const blogPageBtns = document.querySelectorAll('.blog-page-btn');
+
+if (blogGrid && blogPageBtns.length) {
+  const allBlogCards = blogGrid.querySelectorAll('[data-page]');
+
+  function showBlogPage(page) {
+    allBlogCards.forEach(card => {
+      const show = card.dataset.page === String(page);
+      card.style.display = show ? '' : 'none';
+      // Re-trigger reveal for newly shown cards
+      if (show && !card.classList.contains('visible')) {
+        card.classList.add('visible');
+      }
+    });
+    blogPageBtns.forEach(btn => {
+      btn.classList.toggle('active', Number(btn.dataset.page) === page);
+      btn.setAttribute('aria-current', Number(btn.dataset.page) === page ? 'page' : 'false');
+    });
+  }
+
+  blogPageBtns.forEach(btn => {
+    btn.addEventListener('click', () => showBlogPage(Number(btn.dataset.page)));
+  });
+
+  // Show page 1 on load
+  showBlogPage(1);
+}
+
 // ---- Scroll-reveal animation with optimized staggering ----
 const revealEls = document.querySelectorAll('.reveal');
 

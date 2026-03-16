@@ -21,25 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: 'var(--clr-accent)',
-            brand2: 'var(--clr-accent2)',
-            ink: 'var(--clr-text)',
-            muted: 'var(--clr-muted)',
-            panel: 'var(--clr-darker)'
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../tailwind.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,94 +52,6 @@
   }
   </script>
   <style>
-    .blog-container {
-      max-width: 750px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem;
-    }
-    .blog-header {
-      margin-bottom: 3rem;
-      padding-top: 4rem;
-    }
-    .blog-header h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
-    .blog-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--clr-accent);
-      background: rgba(79, 156, 249, 0.12);
-      border: 1px solid rgba(79, 156, 249, 0.25);
-      border-radius: 50px;
-      padding: 0.25rem 0.75rem;
-      margin-bottom: 1rem;
-    }
-    .blog-meta {
-      display: flex;
-      gap: 1.5rem;
-      color: var(--clr-muted);
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-    }
-    .blog-content h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 2.5rem 0 1rem 0;
-      color: var(--clr-text);
-    }
-    .blog-content h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin: 2rem 0 0.75rem 0;
-      color: var(--clr-accent);
-    }
-    .blog-content p {
-      margin-bottom: 1.25rem;
-      color: var(--clr-muted);
-      line-height: 1.8;
-      font-size: 1.05rem;
-    }
-    .blog-content ul, .blog-content ol {
-      margin: 1.5rem 0 1.5rem 1.5rem;
-      color: var(--clr-muted);
-    }
-    .blog-content li {
-      margin-bottom: 0.75rem;
-      line-height: 1.7;
-    }
-    .use-case-card {
-      background: rgba(79, 156, 249, 0.08);
-      border-left: 4px solid var(--clr-accent);
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      border-radius: 4px;
-    }
-    .use-case-card strong {
-      color: var(--clr-accent);
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-    .use-case-card p {
-      margin-bottom: 0;
-    }
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 2rem;
-      color: var(--clr-accent);
-      transition: color var(--transition);
-    }
-    .back-btn:hover {
-      color: var(--clr-text);
-    }
-
     /* ── Use-case structure ── */
     .uc-section-label {
       font-size: 0.72rem;
@@ -265,13 +159,13 @@
       <a href="../index.html" class="logo">MLTEK<span>Solutions</span></a>
       <nav aria-label="Main navigation" class="ml-auto hidden md:block">
         <ul class="flex items-center gap-8">
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#about">About</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#services">Services</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#how-it-works">How It Works</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#blogs">Blogs</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#usecases">Usecases</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#industries">Industries</a></li>
-          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#contact">Contact</a></li>
+          <li><a class="nav-link" href="../index.html#about">About</a></li>
+          <li><a class="nav-link" href="../index.html#services">Services</a></li>
+          <li><a class="nav-link" href="../index.html#how-it-works">How It Works</a></li>
+          <li><a class="nav-link" href="../index.html#blogs">Blogs</a></li>
+          <li><a class="nav-link" href="../index.html#usecases">Usecases</a></li>
+          <li><a class="nav-link" href="../index.html#industries">Industries</a></li>
+          <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
         </ul>
       </nav>
       <button class="hamburger ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/15 text-xl text-ink transition hover:border-brand/60 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70 md:hidden" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
