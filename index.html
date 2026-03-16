@@ -42,6 +42,110 @@
     };
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ── Structured Data (JSON-LD) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mltekai.com/#organization",
+        "name": "MLTEK Solutions",
+        "url": "https://mltekai.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mltekai.com/og-image.png"
+        },
+        "description": "MLTEK Solutions designs and deploys custom AI agents that automate complex business workflows, data pipelines, and decision processes for enterprise clients.",
+        "foundingDate": "2024",
+        "areaServed": "Worldwide",
+        "serviceType": ["AI Agent Development", "Agentic AI Consulting", "Enterprise AI Automation"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "url": "https://mltekai.com/#contact",
+          "availableLanguage": "English"
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mltekai.com/#website",
+        "url": "https://mltekai.com",
+        "name": "MLTEK Solutions",
+        "publisher": { "@id": "https://mltekai.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://mltekai.com/#webpage",
+        "url": "https://mltekai.com",
+        "name": "MLTEK Solutions – Autonomous AI Agents for the Enterprise",
+        "description": "MLTEK Solutions builds autonomous AI agents that plan, reason, and act—turning complex business challenges into automated workflows and actionable outcomes.",
+        "isPartOf": { "@id": "https://mltekai.com/#website" },
+        "about": { "@id": "https://mltekai.com/#organization" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "AI Agent Services by MLTEK Solutions",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Conversational Agents",
+            "description": "We build voice and chat agents that handle customer support, virtual assistance, sales qualification, and knowledge retrieval on your behalf — 24/7, across every channel."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Data Operation Agents",
+            "description": "We engineer autonomous pipelines that discover, extract, transform, and load data across your systems with intelligent error handling and self-healing adaptation."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Process Workflow Agents",
+            "description": "We replace manual processes with agents that run multi-step workflows end to end — approvals, notifications, escalations — with full auditability."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Decision Intelligence Agents",
+            "description": "We deploy agents that surface the right recommendation at the right moment — gathering signals, weighing options, and putting data-driven insight in front of your decision-makers."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does MLTEK Solutions build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MLTEK Solutions designs and deploys custom AI agents — conversational agents, data operation agents, process workflow agents, and decision intelligence agents — tailored to your specific business operations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What industries does MLTEK serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MLTEK serves Financial Services, Healthcare, Manufacturing, Retail, and Professional Services, deploying agentic AI where it creates the most measurable operational impact."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to deploy an AI agent?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MLTEK's four-phase engagement — Discover, Design, Deploy, Optimize — is designed to deliver working systems in weeks, not months, with cloud, on-prem, or hybrid deployment options."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
