@@ -20,6 +20,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: 'var(--clr-accent)',
+            brand2: 'var(--clr-accent2)',
+            ink: 'var(--clr-text)',
+            muted: 'var(--clr-muted)',
+            panel: 'var(--clr-darker)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .blog-container {
       max-width: 750px;
@@ -91,20 +110,21 @@
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-inner">
+  <header class="fixed inset-x-0 top-0 z-[100] border-b border-white/10 bg-[#0a0e1a]/90 backdrop-blur-xl">
+    <a href="../index.html" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[110] focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-[#0a0e1a]">Skip to content</a>
+    <div class="container flex h-[68px] items-center gap-8">
       <a href="../index.html" class="logo">MLTEK<span>Solutions</span></a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#services">Services</a></li>
-          <li><a href="../index.html#blogs">Blogs</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+      <nav aria-label="Main navigation" class="ml-auto hidden md:block">
+        <ul class="flex items-center gap-8">
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#about">About</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#services">Services</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#blogs">Blogs</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="../index.html#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">&#9776;</button>
+      <button class="hamburger ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/15 text-xl text-ink transition hover:border-brand/60 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70 md:hidden" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">&#9776;</button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu hidden" id="mobileMenu">
       <a href="../index.html#about" onclick="toggleMenu()">About</a>
       <a href="../index.html#services" onclick="toggleMenu()">Services</a>
       <a href="../index.html#blogs" onclick="toggleMenu()">Blogs</a>
@@ -265,11 +285,25 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('open');
+      const btn  = document.querySelector('.hamburger');
+      const isOpen = menu.classList.toggle('open');
+      menu.classList.toggle('hidden', !isOpen);
+      if (btn) btn.setAttribute('aria-expanded', String(isOpen));
     }
+    document.addEventListener('click', (e) => {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (!menu || !hamburger) return;
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+        menu.classList.add('hidden');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
   </script>
 </body>
 </html>

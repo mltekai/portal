@@ -23,47 +23,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: 'var(--clr-accent)',
+            brand2: 'var(--clr-accent2)',
+            ink: 'var(--clr-text)',
+            muted: 'var(--clr-muted)',
+            panel: 'var(--clr-darker)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
   <!-- ========== NAVIGATION ========== -->
-  <header class="navbar">
-    <div class="container nav-inner">
+  <header class="fixed inset-x-0 top-0 z-[100] border-b border-white/10 bg-[#0a0e1a]/90 backdrop-blur-xl">
+    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[110] focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-[#0a0e1a]">Skip to content</a>
+    <div class="container flex h-[68px] items-center gap-8">
       <a href="#home" class="logo">MLTEK<span>Solutions</span></a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#blogs">Blogs</a></li>
-          <li><a href="#usecases">Usecases</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <nav aria-label="Main navigation" class="ml-auto hidden md:block">
+        <ul class="flex items-center gap-8">
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#about">About</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#services">Services</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#how-it-works">How It Works</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#blogs">Blogs</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#usecases">Usecases</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#industries">Industries</a></li>
+          <li><a class="text-sm text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+      <button class="hamburger ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/15 text-xl text-ink transition hover:border-brand/60 hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70 md:hidden" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#blogs">Blogs</a>
-      <a href="#usecases">Usecases</a>
-      <a href="#industries">Industries</a>
-      <a href="#contact">Contact</a>
+    <div class="mobile-menu hidden border-t border-white/10 bg-[#0a0f1e] px-6 py-5 md:hidden" id="mobileMenu">
+      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#about">About</a>
+      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#services">Services</a>
+      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#how-it-works">How It Works</a>
+      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#blogs">Blogs</a>
+      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#usecases">Usecases</a>
+      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#industries">Industries</a>
+      <a class="py-1 text-[0.95rem] text-muted transition-colors duration-200 hover:text-ink focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70" href="#contact">Contact</a>
     </div>
   </header>
 
   <!-- ========== HERO ========== -->
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <p class="eyebrow">MLTEK SOLUTIONS</p>
-      <h1>AI Agents That Think,<br /><span>Act &amp; Deliver</span></h1>
-      <p class="hero-subtitle">We build systems that plan, reason, and execute—turning complex business processes into self-running workflows, powered by your data.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Deploy Your First Agent</a>
-        <a href="#services" class="btn btn-ghost">See How It Works</a>
+  <section class="relative flex min-h-screen items-center overflow-hidden bg-cover bg-center" id="home" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');">
+    <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(10,14,26,0.88)_0%,rgba(79,156,249,0.15)_100%)]"></div>
+    <div class="container relative w-full pt-[68px]">
+      <div class="max-w-[680px]">
+        <p class="mb-4 text-[0.78rem] font-bold uppercase tracking-[0.2em] text-brand">MLTEK SOLUTIONS</p>
+        <h1 class="mb-8 bg-clip-text text-[clamp(2.8rem,5.5vw,4.75rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-transparent [background-image:linear-gradient(120deg,#ffffff_0%,var(--clr-accent)_60%,var(--clr-accent2)_100%)] [-webkit-text-fill-color:transparent]">AI Agents That Think,<br /><span class="text-brand [-webkit-text-fill-color:var(--clr-accent)]">Act &amp; Deliver</span></h1>
+        <p class="my-6 max-w-[500px] text-[1.2rem] text-ink">We build systems that plan, reason, and execute—turning complex business processes into self-running workflows, powered by your data.</p>
+        <div class="hero-ctas flex flex-wrap gap-4 max-[600px]:flex-col max-[600px]:items-start">
+          <a href="#contact" class="btn btn-primary">Deploy Your First Agent</a>
+          <a href="#services" class="btn btn-ghost">See How It Works</a>
+        </div>
       </div>
     </div>
   </section>
@@ -95,13 +117,13 @@
     <div class="container two-col">
       <div class="text-col reveal">
         <p class="section-label">About Us</p>
-        <h2>Two Decades of<br />Solving Hard Problems</h2>
+        <h2>Built on Deep Expertise.<br />Focused on What's Next.</h2>
         <p>
-          20+ years across data architecture, systems modernization, and digital transformation taught us one truth: the hardest problems aren't technical, they're operational. Broken processes, siloed data, and slow decisions cost organizations millions every year.
+          MLTEK Solutions was founded on a simple conviction: the organizations that win in the next decade won't just adopt AI—they'll operationalize it. With over 20 years engineering data infrastructure, modernizing legacy systems, and driving enterprise transformation, we know where complexity hides and how to eliminate it.
         </p>
         <div class="about-pivot">
-          <p class="about-pivot-label">The Natural Evolution</p>
-          <p>That foundation now powers one discipline: <strong>Agentic AI Automation</strong>. We deploy systems that don't just surface insights&mdash;they own processes, adapt in real time, and deliver outcomes autonomously. Data is the fuel. Workflows are the engine. Agents are the driver.</p>
+          <p class="about-pivot-label">Why Agentic AI, Why Now</p>
+          <p>Every engagement we've led pointed to the same bottleneck: humans doing work that systems should own. We built MLTEK to close that gap. Our solutions don't generate reports and stop—they <strong>execute decisions, orchestrate workflows, and adapt continuously</strong>, turning organizational knowledge into autonomous action.</p>
         </div>
         <div class="about-credentials">
           <div class="credential">
@@ -110,11 +132,11 @@
           </div>
           <div class="credential">
             <span class="credential-num">5+</span>
-            <span class="credential-label">Industries Transformed</span>
+            <span class="credential-label">Industries Served</span>
           </div>
           <div class="credential">
-            <span class="credential-num">AI&#8209;First</span>
-            <span class="credential-label">Approach &amp; Delivery</span>
+            <span class="credential-num">AI&#8209;Native</span>
+            <span class="credential-label">Architecture &amp; Delivery</span>
           </div>
         </div>
       </div>

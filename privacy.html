@@ -7,6 +7,25 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: 'var(--clr-accent)',
+            brand2: 'var(--clr-accent2)',
+            ink: 'var(--clr-text)',
+            muted: 'var(--clr-muted)',
+            panel: 'var(--clr-darker)'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .legal-page { padding: 8rem 0 5rem; max-width: 800px; margin: 0 auto; }
     .legal-page h1 { font-size: 2rem; margin-bottom: 0.5rem; }
@@ -16,8 +35,8 @@
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-inner">
+  <header class="fixed inset-x-0 top-0 z-[100] border-b border-white/10 bg-[#0a0e1a]/90 backdrop-blur-xl">
+    <div class="container flex h-[68px] items-center">
       <a href="index.html" class="logo">MLTEK<span>Solutions</span></a>
     </div>
   </header>

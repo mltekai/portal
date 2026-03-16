@@ -5,17 +5,26 @@
 // =========================================================
 
 // Set current year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 // ---- Mobile menu toggle ----
 function toggleMenu() {
-  const menu   = document.getElementById('mobileMenu');
-  const btn    = document.querySelector('.hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const btn  = document.querySelector('.hamburger');
+  if (!menu || !btn) return;
+
   const isOpen = menu.classList.toggle('open');
+  menu.classList.toggle('hidden', !isOpen);
   btn.setAttribute('aria-expanded', String(isOpen));
 }
 
-document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+const hamburgerBtn = document.querySelector('.hamburger');
+if (hamburgerBtn) {
+  hamburgerBtn.addEventListener('click', toggleMenu);
+}
 
 document.querySelectorAll('.mobile-menu a').forEach(link => {
   link.addEventListener('click', toggleMenu);
@@ -25,19 +34,27 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
 document.addEventListener('click', (e) => {
   const menu      = document.getElementById('mobileMenu');
   const hamburger = document.querySelector('.hamburger');
-  if (menu.classList.contains('open') && !menu.contains(e.target) && e.target !== hamburger) {
+  if (!menu || !hamburger) return;
+
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
     menu.classList.remove('open');
+    menu.classList.add('hidden');
     hamburger.setAttribute('aria-expanded', 'false');
   }
 });
 
 // ---- Contact form submission ----
-document.getElementById('contactForm').addEventListener('submit', handleSubmit);
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', handleSubmit);
+}
 
 function handleSubmit(e) {
   const form    = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
   const errorEl = document.getElementById('formError');
+  if (!form || !errorEl) return;
+
   const btn     = form.querySelector('button[type="submit"]');
 
   const name    = document.getElementById('name').value.trim();
@@ -78,7 +95,9 @@ function updateScrollState() {
   });
   
   // Update back-to-top button
-  backToTop.classList.toggle('visible', lastScrollY > 500);
+  if (backToTop) {
+    backToTop.classList.toggle('visible', lastScrollY > 500);
+  }
   
   ticking = false;
 }
@@ -94,9 +113,11 @@ window.addEventListener('scroll', () => {
 updateScrollState();
 
 // ---- Back to top smooth scroll ----
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ---- Scroll-reveal animation with optimized staggering ----
 const revealEls = document.querySelectorAll('.reveal');
