@@ -13,7 +13,7 @@ portal/
 ├── main.js             # JavaScript functionality
 ├── privacy.html        # Privacy Policy
 ├── terms.html          # Terms & Support
-└── Blogs/              # Blog articles
+└── blogs/              # Blog articles
 ```
 
 ## 🚀 Local Development
