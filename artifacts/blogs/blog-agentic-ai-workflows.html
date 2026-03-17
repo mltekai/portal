@@ -166,22 +166,34 @@
     </div>
   </div>
 
-  <!-- ── Giscus Comments ── -->
-  <section style="max-width:860px;margin:0 auto;padding:3rem 1.5rem 4rem;">
+  <!-- ── Giscus Comments (lazy) ── -->
+  <section id="giscus-comments" style="max-width:860px;margin:0 auto;padding:3rem 1.5rem 4rem;">
     <h2 style="font-size:1.25rem;font-weight:600;color:#e2e8f0;margin-bottom:1.5rem;">Discussion</h2>
-    <script src="https://giscus.app/client.js"
-        data-repo="mltekai/portal"
-        data-repo-id="R_kgDORnosfQ"
-        data-mapping="pathname"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-    </script>
   </section>
+  <script>
+    (function () {
+      const container = document.getElementById('giscus-comments');
+      const observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          var s = document.createElement('script');
+          s.src = 'https://giscus.app/client.js';
+          s.setAttribute('data-repo', 'mltekai/portal');
+          s.setAttribute('data-repo-id', 'R_kgDORnosfQ');
+          s.setAttribute('data-mapping', 'pathname');
+          s.setAttribute('data-reactions-enabled', '1');
+          s.setAttribute('data-emit-metadata', '0');
+          s.setAttribute('data-input-position', 'bottom');
+          s.setAttribute('data-theme', 'preferred_color_scheme');
+          s.setAttribute('data-lang', 'en');
+          s.setAttribute('crossorigin', 'anonymous');
+          s.async = true;
+          container.appendChild(s);
+          observer.disconnect();
+        }
+      }, { rootMargin: '200px' });
+      observer.observe(container);
+    })();
+  </script>
 
   <footer class="footer">
     <div class="container footer-inner">
