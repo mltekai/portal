@@ -103,6 +103,10 @@ section[id], div[id] { scroll-margin-top: 80px; }
   color: rgba(255,255,255,0.38);
   margin: 0;
 }
+.whats-new-panel ul li:nth-child(n+7) { display: none; }
+
+/* Blog pagination: hide cards not on current page */
+#blogGrid .blog-card.is-hidden { display: none !important; }
 
 /* ---------- Reveal animation ---------- */
 .reveal {

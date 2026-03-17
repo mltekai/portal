@@ -119,33 +119,41 @@ if (backToTop) {
   });
 }
 
-// ---- Blog pagination ----
+// ---- Blog pagination (auto, 6 cards per page) ----
+const CARDS_PER_PAGE = 6;
 const blogGrid = document.getElementById('blogGrid');
-const blogPageBtns = document.querySelectorAll('.blog-page-btn');
+const blogPagination = document.getElementById('blogPagination');
 
-if (blogGrid && blogPageBtns.length) {
-  const allBlogCards = blogGrid.querySelectorAll('[data-page]');
+if (blogGrid && blogPagination) {
+  const allBlogCards = Array.from(blogGrid.querySelectorAll('.blog-card'));
+  const pageCount = Math.ceil(allBlogCards.length / CARDS_PER_PAGE);
+
+  // Build pagination buttons dynamically
+  blogPagination.innerHTML = Array.from({ length: pageCount }, (_, i) => {
+    const p = i + 1;
+    return `<button class="blog-page-btn${p === 1 ? ' active' : ''}" data-page="${p}" aria-label="Page ${p}" aria-current="${p === 1 ? 'page' : 'false'}">${p}</button>`;
+  }).join('');
 
   function showBlogPage(page) {
-    allBlogCards.forEach(card => {
-      const show = card.dataset.page === String(page);
-      card.style.display = show ? '' : 'none';
-      // Re-trigger reveal for newly shown cards
-      if (show && !card.classList.contains('visible')) {
+    allBlogCards.forEach((card, i) => {
+      const onPage = Math.floor(i / CARDS_PER_PAGE) + 1 === page;
+      card.classList.toggle('is-hidden', !onPage);
+      if (onPage && !card.classList.contains('visible')) {
         card.classList.add('visible');
       }
     });
-    blogPageBtns.forEach(btn => {
-      btn.classList.toggle('active', Number(btn.dataset.page) === page);
-      btn.setAttribute('aria-current', Number(btn.dataset.page) === page ? 'page' : 'false');
+    blogPagination.querySelectorAll('.blog-page-btn').forEach(btn => {
+      const active = Number(btn.dataset.page) === page;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-current', active ? 'page' : 'false');
     });
   }
 
-  blogPageBtns.forEach(btn => {
-    btn.addEventListener('click', () => showBlogPage(Number(btn.dataset.page)));
+  blogPagination.addEventListener('click', e => {
+    const btn = e.target.closest('.blog-page-btn');
+    if (btn) showBlogPage(Number(btn.dataset.page));
   });
 
-  // Show page 1 on load
   showBlogPage(1);
 }
 

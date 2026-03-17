@@ -178,6 +178,16 @@
             <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.35rem;">
 
               <li>
+                <a href="artifacts/blogs/blog-graphrag-knowledge-graph.html" class="whats-new-item">
+                  <span class="whats-new-badge whats-new-badge--blog">Blog</span>
+                  <div>
+                    <p class="whats-new-title">From Hallucinations to Hyper-Personalization: How GraphRAG Grounds AI</p>
+                    <p class="whats-new-date">Mar 17, 2026</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
                 <a href="artifacts/blogs/blog-2026-agentic-playbook.html" class="whats-new-item">
                   <span class="whats-new-badge whats-new-badge--blog">Blog</span>
                   <div>
@@ -227,15 +237,6 @@
                 </a>
               </li>
 
-              <li>
-                <a href="artifacts/usecases/autonomous_data_pipeline.html" class="whats-new-item">
-                  <span class="whats-new-badge whats-new-badge--usecase">Use Case</span>
-                  <div>
-                    <p class="whats-new-title">Autonomous Data Pipeline Orchestration</p>
-                    <p class="whats-new-date">Mar 2026</p>
-                  </div>
-                </a>
-              </li>
 
             </ul>
       </div>
@@ -445,17 +446,10 @@
           <span class="blog-card-read">Read full article &rarr;</span>
         </a>
 
-        <a href="artifacts/blogs/blog-agentic-ai-workflows.html" class="blog-card reveal" data-page="1">
-          <div class="blog-card-tag">Workflows</div>
-          <h3>How Agentic AI is Transforming Data Workflows</h3>
-          <p>Traditional pipelines are slow and manual. Learn how autonomous agents discover patterns, detect anomalies, and act&mdash;no human in the loop.</p>
-          <span class="blog-card-read">Read article &rarr;</span>
-        </a>
-
-        <a href="artifacts/blogs/blog-trustworthy-agents.html" class="blog-card reveal" data-page="1">
-          <div class="blog-card-tag">Trust &amp; Safety</div>
-          <h3>Building Trustworthy Autonomous Agents</h3>
-          <p>Explore the five pillars&mdash;transparency, accountability, alignment, robustness, and fairness&mdash;that make agents enterprise-ready.</p>
+        <a href="artifacts/blogs/blog-graphrag-knowledge-graph.html" class="blog-card reveal" data-page="1">
+          <div class="blog-card-tag">GraphRAG</div>
+          <h3>From Hallucinations to Hyper-Personalization: How GraphRAG Grounds AI in Your Knowledge Graph</h3>
+          <p>Stop hallucinations cold. Learn how Neo4j, LangChain, LangGraph, and LlamaIndex combine Knowledge Graphs with multi-hop reasoning to deliver hyper-personalized, factually grounded AI at enterprise scale.</p>
           <span class="blog-card-read">Read article &rarr;</span>
         </a>
 
@@ -466,6 +460,20 @@
           <span class="blog-card-read">Read full article &rarr;</span>
         </a>
 
+        <a href="artifacts/blogs/blog-trustworthy-agents.html" class="blog-card reveal" data-page="1">
+          <div class="blog-card-tag">Trust &amp; Safety</div>
+          <h3>Building Trustworthy Autonomous Agents</h3>
+          <p>Explore the five pillars&mdash;transparency, accountability, alignment, robustness, and fairness&mdash;that make agents enterprise-ready.</p>
+          <span class="blog-card-read">Read article &rarr;</span>
+        </a>
+
+        <a href="artifacts/blogs/blog-agentic-ai-workflows.html" class="blog-card reveal" data-page="1">
+          <div class="blog-card-tag">Workflows</div>
+          <h3>How Agentic AI is Transforming Data Workflows</h3>
+          <p>Traditional pipelines are slow and manual. Learn how autonomous agents discover patterns, detect anomalies, and act&mdash;no human in the loop.</p>
+          <span class="blog-card-read">Read article &rarr;</span>
+        </a>
+
         <div class="blog-card coming-soon reveal" data-page="1">
           <div class="blog-card-tag">Security</div>
           <h3>Securing AI-Driven Systems: Best Practices</h3>
@@ -473,14 +481,14 @@
           <span class="blog-card-read coming-soon-label">Coming soon</span>
         </div>
 
-        <div class="blog-card coming-soon reveal" data-page="1">
+        <!-- ── Page 2 ── -->
+        <div class="blog-card coming-soon reveal" data-page="2">
           <div class="blog-card-tag">Governance</div>
           <h3>AI Governance: Policies for Responsible Use</h3>
           <p>Building ethical, auditable frameworks that let your organization move fast without breaking trust.</p>
           <span class="blog-card-read coming-soon-label">Coming soon</span>
         </div>
 
-        <!-- ── Page 2 ── -->
         <div class="blog-card coming-soon reveal" data-page="2">
           <div class="blog-card-tag">Resilience</div>
           <h3>Designing Resilient AI Systems</h3>
@@ -532,12 +540,8 @@
 
       </div>
 
-      <!-- Blog Pagination -->
-      <div class="blog-pagination" id="blogPagination">
-        <button class="blog-page-btn active" data-page="1" aria-label="Page 1">1</button>
-        <button class="blog-page-btn" data-page="2" aria-label="Page 2">2</button>
-        <button class="blog-page-btn" data-page="3" aria-label="Page 3">3</button>
-      </div>
+      <!-- Blog Pagination (built dynamically by main.js) -->
+      <div class="blog-pagination" id="blogPagination"></div>
     </div>
   </section>
 
