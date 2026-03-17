@@ -59,6 +59,51 @@ ul { list-style: none; }
 /* ---------- Scroll offset for fixed navbar ---------- */
 section[id], div[id] { scroll-margin-top: 80px; }
 
+/* ---------- What's New panel ---------- */
+@media (max-width: 900px) {
+  .whats-new-panel { display: none; }
+}
+@keyframes whats-new-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 7px #4f9cf9; }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px #4f9cf9; }
+}
+.whats-new-item {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  text-decoration: none;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  transition: background 0.18s;
+}
+.whats-new-item:hover { background: rgba(79,156,249,0.08); }
+.whats-new-badge {
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.18rem 0.42rem;
+  border-radius: 4px;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+.whats-new-badge--blog    { color: #4f9cf9; background: rgba(79,156,249,0.13); }
+.whats-new-badge--usecase { color: #a78bfa; background: rgba(139,92,246,0.13); }
+.whats-new-item:has(.whats-new-badge--usecase):hover { background: rgba(139,92,246,0.08); }
+.whats-new-title {
+  font-size: 0.845rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.88);
+  margin: 0 0 0.18rem;
+  line-height: 1.35;
+}
+.whats-new-date {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.38);
+  margin: 0;
+}
+
 /* ---------- Reveal animation ---------- */
 .reveal {
   opacity: 0;

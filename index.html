@@ -165,6 +165,83 @@
   <!-- ========== HERO ========== -->
   <section class="relative flex min-h-screen items-center overflow-hidden bg-cover bg-center" id="home" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');">
     <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(10,14,26,0.88)_0%,rgba(79,156,249,0.15)_100%)]"></div>
+
+    <!-- What's New panel: fixed to top-right of hero, 2px below navbar -->
+    <div class="whats-new-panel" style="position:absolute; top:70px; right:1.5rem; width:300px; z-index:10;">
+      <div style="background:rgba(8,12,26,0.82); border:1px solid rgba(79,156,249,0.25); border-radius:14px; padding:1.25rem 1.4rem; backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);">
+            <!-- Header -->
+            <div style="display:flex; align-items:center; gap:0.55rem; margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#4f9cf9; box-shadow:0 0 7px #4f9cf9; animation:whats-new-pulse 2s ease-in-out infinite;"></span>
+              <p style="font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; color:#4f9cf9; margin:0;">What's New</p>
+            </div>
+            <!-- Items -->
+            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.35rem;">
+
+              <li>
+                <a href="artifacts/blogs/blog-2026-agentic-playbook.html" class="whats-new-item">
+                  <span class="whats-new-badge whats-new-badge--blog">Blog</span>
+                  <div>
+                    <p class="whats-new-title">Beyond the Bot: The 2026 Agentic Playbook</p>
+                    <p class="whats-new-date">Mar 17, 2026</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="artifacts/blogs/blog-agentic-ai-workflows.html" class="whats-new-item">
+                  <span class="whats-new-badge whats-new-badge--blog">Blog</span>
+                  <div>
+                    <p class="whats-new-title">How Agentic AI is Transforming Data Workflows</p>
+                    <p class="whats-new-date">Mar 15, 2026</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="artifacts/blogs/blog-trustworthy-agents.html" class="whats-new-item">
+                  <span class="whats-new-badge whats-new-badge--blog">Blog</span>
+                  <div>
+                    <p class="whats-new-title">Building Trustworthy Autonomous Agents</p>
+                    <p class="whats-new-date">Mar 15, 2026</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="artifacts/blogs/blog-ai-first-data-strategy.html" class="whats-new-item">
+                  <span class="whats-new-badge whats-new-badge--blog">Blog</span>
+                  <div>
+                    <p class="whats-new-title">Data Strategy for Generative AI</p>
+                    <p class="whats-new-date">Mar 15, 2026</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="artifacts/usecases/conversational_usecase.html" class="whats-new-item">
+                  <span class="whats-new-badge whats-new-badge--usecase">Use Case</span>
+                  <div>
+                    <p class="whats-new-title">Conversational Voicebot Agent</p>
+                    <p class="whats-new-date">Mar 15, 2026</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="artifacts/usecases/autonomous_data_pipeline.html" class="whats-new-item">
+                  <span class="whats-new-badge whats-new-badge--usecase">Use Case</span>
+                  <div>
+                    <p class="whats-new-title">Autonomous Data Pipeline Orchestration</p>
+                    <p class="whats-new-date">Mar 2026</p>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+      </div>
+    </div>
+
+    <!-- Hero content -->
     <div class="container relative w-full pt-[68px]">
       <div class="max-w-[680px]">
         <p class="mb-4 text-[0.78rem] font-bold uppercase tracking-[0.2em] text-brand">MLTEK SOLUTIONS</p>
