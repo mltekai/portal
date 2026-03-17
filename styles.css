@@ -1181,6 +1181,153 @@ a.usecase-row:hover {
   color: #fff;
 }
 
+/* ---------- Dark / Light mode toggle button ---------- */
+.darkmode-toggle {
+  position: fixed;
+  bottom: 5.5rem;   /* sits above the back-to-top button */
+  right: 1.75rem;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: rgba(13,18,36,0.85);
+  color: #e0eaff;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.35);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  backdrop-filter: blur(8px);
+}
+.darkmode-toggle:hover {
+  background: rgba(77,166,255,0.2);
+  border-color: rgba(77,166,255,0.5);
+  color: #4da6ff;
+}
+
+/* ---------- Light mode: CSS variable overrides ---------- */
+body.lightmode {
+  --clr-dark:   #d8dfe8;
+  --clr-darker: #e8ecf2;
+  --clr-text:   #1e293b;
+  --clr-muted:  #4a5568;
+  --clr-card:   #edf0f5;
+  --clr-border: rgba(0, 0, 0, 0.09);
+  background: linear-gradient(160deg, #dde2ea 0%, #cfd5e0 100%) !important;
+  color: #1e293b;
+}
+
+/* Header */
+body.lightmode header {
+  background-color: rgba(220,225,235,0.97) !important;
+  border-bottom-color: rgba(0,0,0,0.1) !important;
+}
+
+/* Nav links & logo */
+body.lightmode .logo { color: #1e293b; }
+body.lightmode .logo span { color: var(--clr-accent); }
+
+/* Headings hardcoded #ffffff */
+body.lightmode h1,
+body.lightmode h2,
+body.lightmode h3,
+body.lightmode .step-label,
+body.lightmode .cta-text h2,
+body.lightmode .card h3,
+body.lightmode .blog-card h3,
+body.lightmode .usecase-row h3,
+body.lightmode .sector-bento-card h3,
+body.lightmode .sector-bento-wide-left h3 { color: #1e293b !important; -webkit-text-fill-color: #1e293b; }
+
+/* Hero h1 gradient stays nice in light too */
+body.lightmode .container .max-w-\[680px\] h1 {
+  background-image: linear-gradient(120deg, #1e293b 0%, #2563eb 60%, #7c3aed 100%) !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* Buttons */
+body.lightmode .btn-ghost {
+  color: #1e293b;
+  border-color: rgba(0,0,0,0.2);
+}
+body.lightmode .btn-ghost:hover {
+  background: rgba(0,0,0,0.06);
+  border-color: rgba(0,0,0,0.35);
+}
+
+/* Stats strip */
+body.lightmode .stats-strip {
+  background: #d8dde7;
+  border-color: rgba(0,0,0,0.08);
+}
+
+/* Cards */
+body.lightmode .card,
+body.lightmode .blog-card,
+body.lightmode .form-col,
+body.lightmode .sector-bento-card {
+  background: #e4e8f0;
+  border-color: rgba(0,0,0,0.09);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+body.lightmode .card:hover,
+body.lightmode .blog-card:hover { box-shadow: 0 12px 36px rgba(37,99,235,0.12); }
+
+/* Use-case rows */
+body.lightmode .usecase-row {
+  background: #e4e8f0;
+  border-color: rgba(0,0,0,0.09);
+}
+
+/* Vision section (inline bg style) */
+body.lightmode #vision {
+  background: linear-gradient(170deg, #d8dde7 0%, #cfd5df 60%, #d4dae4 100%) !important;
+  border-color: rgba(0,0,0,0.07) !important;
+}
+
+/* Contact form inputs */
+body.lightmode .form-group input,
+body.lightmode .form-group textarea {
+  background: #d8dde7;
+  border-color: rgba(0,0,0,0.13);
+  color: #1e293b;
+}
+body.lightmode .form-group input::placeholder,
+body.lightmode .form-group textarea::placeholder { color: #94a3b8; }
+
+/* Footer */
+body.lightmode .footer {
+  background: #d5dae4;
+  border-color: rgba(0,0,0,0.09);
+}
+
+/* What's New panel */
+body.lightmode .whats-new-panel > div {
+  background: rgba(220,226,236,0.97) !important;
+  border: 1px solid rgba(37,99,235,0.18) !important;
+}
+body.lightmode .whats-new-title { color: #1e293b; }
+body.lightmode .whats-new-date  { color: #64748b; }
+body.lightmode .whats-new-badge--blog    { color: #2563eb; background: #dbeafe; }
+body.lightmode .whats-new-badge--usecase { color: #7c3aed; background: #ede9fe; }
+body.lightmode .whats-new-item:hover { background: rgba(37,99,235,0.07); }
+
+/* Darkmode toggle button in light mode */
+body.lightmode .darkmode-toggle {
+  background: rgba(255,255,255,0.9);
+  border-color: rgba(0,0,0,0.12);
+  color: #1e293b;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+}
+body.lightmode .darkmode-toggle:hover {
+  background: #dbeafe;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .two-col  { grid-template-columns: 1fr; gap: 3rem; }
