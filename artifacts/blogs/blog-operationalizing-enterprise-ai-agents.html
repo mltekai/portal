@@ -132,7 +132,7 @@
         <li><strong>Decision agents</strong> — evaluate options against policy and risk thresholds (your compliance and strategy team)</li>
         <li><strong>Execution agents</strong> — take action in external systems (your operations team)</li>
       </ul>
-      <p>This separation makes it much easier to reason about where a failure occurred and who (or what) is responsible for fixing it.</p>
+      <p>This separation makes it much easier to reason about where a failure occurred and who (or what) is responsible for fixing it. In practice, Knowledge agents are only as reliable as the data layer beneath them—a well-structured <strong>AI-ready data foundation</strong> with a unified <a href="blog-ai-first-data-strategy.html" style="color: var(--clr-accent); text-decoration: underline;">Knowledge Core</a> spanning your operational and analytical layers is what gives Knowledge agents accurate, source-attributed context to reason from.</p>
 
       <h2>3. Governance: Identity Is the New Perimeter</h2>
 
@@ -143,6 +143,8 @@
       <p><strong>Guardrails and human-in-the-loop triggers.</strong> Autonomy is a dial, not a switch. When an agent's confidence on a high-stakes decision drops below a set threshold, it should automatically pause and escalate to a human—not guess and proceed.</p>
 
       <p><strong>Traceability.</strong> Every reasoning step, tool call, and action must be logged in a way that's auditable and legible to non-engineers. When someone asks "why did the agent do that?"—you need an answer.</p>
+
+      <p>Taken together—scoped identity, bounded autonomy, and full traceability—these governance controls are the runtime implementation of what an AI-first data strategy calls the <strong>Active Governance Fabric</strong>: governance that is continuous, embedded in the agent infrastructure itself, and enforced at every decision point rather than reviewed after the fact.</p>
 
       <h2>4. AgentOps: A New Operational Discipline</h2>
 
