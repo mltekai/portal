@@ -1,0 +1,17 @@
+[[redirects]]
+from = "http://www.mltekai.com/*"
+to = "https://mltekai.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.mltekai.com/*"
+to = "https://mltekai.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://mltekai.com/*"
+to = "https://mltekai.com/:splat"
+status = 301
+force = true
