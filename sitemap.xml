@@ -19,6 +19,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://mltekai.com/artifacts/blogs/blog-multiagent-yaml-orchestration.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mltekai.com/artifacts/blogs/blog-slm-agent-runtime.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mltekai.com/artifacts/blogs/blog-llm-routing.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>

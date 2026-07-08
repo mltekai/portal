@@ -15,6 +15,7 @@
     <meta name="twitter:title" content="YAML-Driven Agent Workflows" />
     <meta name="twitter:description" content="How to build configurable multi-agent workflows where  routing logic lives in YAML — no code changes to add new agents or update operation routing." />
     <meta name="twitter:image" content="https://mltekai.com/og-image.png" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#0a0e1a" />
         <meta name="author" content="MLTek AI" />
         <link rel="canonical" href="https://mltekai.com/artifacts/blogs/blog-multiagent-yaml-orchestration.html" />
@@ -39,6 +40,31 @@
             .blog-content pre code { background: transparent; padding: 0; color: #d7e6ff; }
             .blog-intro { font-size: 1.1rem; border-left: 3px solid var(--clr-accent); padding-left: 1rem; margin-bottom: 2rem; color: var(--clr-text); }
         </style>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "@id": "https://mltekai.com/artifacts/blogs/blog-multiagent-yaml-orchestration.html",
+            "headline": "Configurable Multi-Agent Workflows: A YAML-Driven Orchestration",
+            "description": "How to build configurable multi-agent workflows where routing logic lives in YAML, so teams can evolve orchestration behavior without code changes.",
+            "datePublished": "2026-07-08",
+            "dateModified": "2026-07-08",
+            "author": {
+                "@type": "Organization",
+                "name": "MLTek AI",
+                "url": "https://mltekai.com"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "MLTek AI",
+                "url": "https://mltekai.com"
+            },
+            "image": "https://mltekai.com/og-image.png",
+            "url": "https://mltekai.com/artifacts/blogs/blog-multiagent-yaml-orchestration.html",
+            "mainEntityOfPage": "https://mltekai.com/artifacts/blogs/blog-multiagent-yaml-orchestration.html",
+            "keywords": ["multi-agent orchestration", "YAML workflows", "LangGraph", "agent routing", "enterprise AI"]
+        }
+        </script>
 </head>
 <body class="antialiased font-sans text-gray-900 bg-white">
     <header class="fixed inset-x-0 top-0 z-[100] border-b border-white/10 bg-[#0a0e1a]/90 backdrop-blur-xl">
@@ -50,7 +76,6 @@
                             <a href="../../index.html#blogs">Blogs</a>
                             <a href="../../index.html#services">Services</a>
                             <a href="../../index.html#contact">Contact</a>
-        <a href="https://calendly.com/kishore-namburi" target="_blank" rel="noopener noreferrer">Schedule</a>
             </nav>
             <div class="nav-controls ml-auto">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
@@ -63,7 +88,7 @@
             <header class="blog-header">
                 <h1>Configurable Multi-Agent Workflows: A YAML-Driven Orchestration</h1>
                 <div class="blog-meta">
-                    <time datetime="2026-04-17">April 2026</time>
+                                        <time datetime="2026-07-08">July 2026</time>
                     <span>6 min read</span>
                       <span>By MLTek AI</span>
                 </div>
@@ -184,9 +209,6 @@ async def build_agents_from_config(config: dict):
             <li>Declarative and transparent workflow—easy for domain experts to audit or update</li>
             <li>Clear path to extensibility—add new agents, operations, or conditional routing via YAML</li>
         </ul>
-
-        <p><strong>Ready to try?</strong><br>
-        Clone <a href="https://github.com/namburik/mcp_board_agent" target="_blank">namburik/mcp_board_agent</a>, tweak <code>multiagent_workflow.yaml</code>, and run workflows!</p>
     </article>
 </body>
 </html>
